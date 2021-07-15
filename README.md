@@ -11,6 +11,22 @@ My Graph Theory project is about writing a program in Python 3 that takes a regu
 
 - **Explain the difference between regular expressions in infix notation and those in postfix notation**
 
+  [Infix notation](https://en.wikipedia.org/wiki/Infix_notation) is a popular notation for logical formulas and assertions.
+  
+  [Postfix notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation), often known as Reverse Polish notation or Polish postfix notation.
+
+  The main difference between infix and postfix notation is that the infix notation places the operators between the operands, whereas the postfix notation places the operator after the operands.
+
+  Humans can read and grasp infix notation more easily, but postfix notation is much more difficult to understand.
+
+  Parentheses around groups of operands and operators are required in infix notation, unlike in postfix notation, to indicate the intended order in which operations are to be executed. As long as each operator has a fixed number of operands, no parentheses are required in postfix notation.
+
+  In postfix notation when there are several operations, operators are assigned immediately following their second operands. Postfix notation has been shown to result in quicker calculations since it does not need parenthesizing expressions, requiring less operations to be performed to complete ordinary calculations.
+  
+  Examples of converting an Infix to postfix: 
+  
+  ![image](https://user-images.githubusercontent.com/57759154/125867388-80dc5a76-2d91-4a57-9ec3-e22ddef1ab39.png)
+
 
 - **Explain how Thompson's construction for regular expressions works**
 
@@ -53,3 +69,8 @@ https://medium.com/swlh/visualizing-thompsons-construction-algorithm-for-nfas-st
 
 https://web.microsoftstream.com/video/d6d9a2d8-b23e-4abf-b1b7-af3a2d44b82f?referrer=https:%2F%2Flearnonline.gmit.ie%2F
 
+https://en.wikipedia.org/wiki/Infix_notation
+
+https://en.wikipedia.org/wiki/Reverse_Polish_notation
+
+https://pediaa.com/difference-between-prefix-and-postfix/#Infix
