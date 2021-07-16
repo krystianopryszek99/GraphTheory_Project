@@ -7,6 +7,14 @@
 # Project Description
 My Graph Theory project is about writing a program in Python 3 that takes a regular expression and a file as command line arguments, and outputs the number of matches for the regular expression within the file.
 
+# Research
+
+**Shunting-yard algorithm**
+
+I was Introduced to Shunting-yard algorithm in week 6 of the course. As this was new to me, firstly I watched the video on Shunting-yard algorithm [Shunting-yard algorithm](https://web.microsoftstream.com/video/3f9dd01a-6ac9-4d65-b9b9-d6ef1ece8be8) which was available on Moodle. After watching the video I had some understanding of Shunting-yard algorithm which is a method of parsing mathematical expressions specified in infix notation. Video on Implementing the [Shunting-yard algorithm in Python (Part 1)](https://web.microsoftstream.com/video/04fbd7f8-8880-426e-bfb5-2e5478db497e) was really helpful as I ended up coding it on my machine which was great exercise to start with. 
+
+In week 7 I followed a video on Implementing the [Shunting-yard algorithm in Python (Part 2)](https://web.microsoftstream.com/video/85152016-d320-4bbe-bfff-48baebcd59a6) and ended up finishing the full code. I didn’t really understand the context of converting from infix to postfix notation, so I found helpful [website](https://pediaa.com/difference-between-prefix-and-postfix/#Infix) in which I found the definition of infix and postfix and some great examples.
+
 # Questions
 
 - **Explain the difference between regular expressions in infix notation and those in postfix notation**
