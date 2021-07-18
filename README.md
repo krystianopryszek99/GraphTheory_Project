@@ -68,6 +68,13 @@ You presume that the regular expression is in postfix, the stack of fragments of
 
 - **Explain what is meant by the term irregular language in the context of regular expressions**
 
+  A non-regular language, often known as an irregular language, is one that cannot be defined by a regular expression. Non-regular languages outnumber regular languages by a significant amount. According to Kleene's theorem, no FA or TG may accept a non-regular language.
+  
+  The existence of non-regular languages is ensured by the fact that regular languages of any alphabet are countable, and we know that the set of all subsets of strings is not countable. Nonetheless, the goal of creating non-regular languages is to show that certain languages that are "computable" in some way are not regular.
+  
+  Pumping Lemma is a well-known theorem that uses the Pigeon Hole Principle to determine if a language is regular or not. However, the pumping lemma is a negative test; if a language does not meet it, we can be certain that it is not regular; if it does, the language may or may not be regular.
+  
+  The languages Palindrome is a examples of nonregular languages. A palindrome is a word, number, phrase, or other character sequence that reads the same backward as it does forward.
 
 
 # Resources
@@ -82,3 +89,7 @@ https://en.wikipedia.org/wiki/Infix_notation
 https://en.wikipedia.org/wiki/Reverse_Polish_notation
 
 https://pediaa.com/difference-between-prefix-and-postfix/#Infix
+
+https://slideplayer.com/slide/12946344/
+
+https://www.geeksforgeeks.org/how-to-identify-if-a-language-is-regular-or-not/
