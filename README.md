@@ -15,6 +15,12 @@ I was Introduced to Shunting-yard algorithm in week 6 of the course. As this was
 
 In week 7 I followed a video on Implementing the [Shunting-yard algorithm in Python (Part 2)](https://web.microsoftstream.com/video/85152016-d320-4bbe-bfff-48baebcd59a6) and ended up finishing the full code. I didn’t really understand the context of converting from infix to postfix notation, so I found helpful [website](https://pediaa.com/difference-between-prefix-and-postfix/#Infix) in which I found the definition of infix and postfix and some great examples.
 
+**Thompson’s Construction and more of Shunting yard algorithm**
+
+In week 8 we looked at regular expression operations, Thompson’s construction, and more of the Shunting yard algorithm. The regular expression operations were: or operation `“|”` , the concatenation  `“.”` operation, and the Kleene star `“*“`. Firstly I watched the first video which was on [or operation](https://web.microsoftstream.com/video/1f0c5fb1-1a29-43a7-a7f6-9dfb73a5e26d) which was very helpful, then I watched the video on [concatenation operation](https://web.microsoftstream.com/video/6ec2eba7-b0d9-4682-a680-02cad14ef913), and finally I watched the video on [Kleene star](https://web.microsoftstream.com/video/d8971793-ac18-4245-9a0f-f90b0721aeff) which I found much more difficult to understand. 
+Then I started looking at the Thompson’s construction, which I found very interesting in the way it turns postfix into non-deterministic finite automata which recognizes patterns of text. From the previous week, we continued from where we left on the shunting yard algorithm and made a few small changes.
+
+
 # Questions
 
 - **Explain the difference between regular expressions in infix notation and those in postfix notation**
