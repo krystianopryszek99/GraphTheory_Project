@@ -20,6 +20,9 @@ In week 7 I followed a video on Implementing the [Shunting-yard algorithm in Pyt
 In week 8 we looked at regular expression operations, Thompson’s construction, and more of the Shunting yard algorithm. The regular expression operations were: or operation `“|”` , the concatenation  `“.”` operation, and the Kleene star `“*“`. Firstly I watched the first video which was on [or operation](https://web.microsoftstream.com/video/1f0c5fb1-1a29-43a7-a7f6-9dfb73a5e26d) which was very helpful, then I watched the video on [concatenation operation](https://web.microsoftstream.com/video/6ec2eba7-b0d9-4682-a680-02cad14ef913), and finally I watched the video on [Kleene star](https://web.microsoftstream.com/video/d8971793-ac18-4245-9a0f-f90b0721aeff) which I found much more difficult to understand. 
 Then I started looking at the Thompson’s construction, which I found very interesting in the way it turns postfix into non-deterministic finite automata which recognizes patterns of text. From the previous week, we continued from where we left on the shunting yard algorithm and made a few small changes.
 
+**Thompson’s construction in code**
+
+In week 9 we started to look more into developing a python script for Thompson’s construction. Firstly, I watched the video on [Thompson’s construction by hand](https://web.microsoftstream.com/video/634e1883-ad11-447f-971a-cb7965355c13) as I had difficulty understanding how it works. After re-watching the video a couple of times, I finally had a better understanding on Thompson’s construction and was ready to start coding it, with the help of the video on [Thompson’s construction in code](https://web.microsoftstream.com/video/4012d43a-bb46-4ceb-8aa9-2ae598539a32). Then I tried to complete the code myself, but I found it very difficult, so I followed the video along and was capable of complete the code.
 
 # Questions
 
