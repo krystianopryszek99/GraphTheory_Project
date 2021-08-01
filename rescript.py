@@ -1,6 +1,8 @@
 # Graph Theory Project
 # Krystian Opryszek - G00366895
 
+import argparse, textwrap
+
 # Shunting yard
 
 def shunt(infix):
@@ -21,7 +23,7 @@ def shunt(infix):
                 postfix = postfix + stack[-1]
                 # Remove operator from stack - it's like pop
                 stack = stack[:-1]
-        # Push c to stack
+            # Push c to stack
             stack = stack + c
             # if '(' push to operator stack
         elif c == '(':
@@ -183,6 +185,25 @@ def re_to_nfa(postfix):
         return None
     else:
         return stack[0] 
+
+# arg parser 
+parser = argparse.ArgumentParser(
+    formatter_class=argparse.RawDescriptionHelpFormatter,
+    description=textwrap.dedent('''\
+        How to run this program
+        _______________________________________
+
+        Program that takes a regular expression 
+        and a file as command line arguments, 
+        and outputs the number of matches for 
+        the regular expression within the file
+
+        Run the program as follows:
+        eg. python3 rescript.py a.b input.txt
+
+        '''))
+
+args = parser.parse_args()
 
 infix = "3+4*(2-1)"
 postfix = "3421-*+"
