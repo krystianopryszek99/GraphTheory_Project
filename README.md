@@ -24,6 +24,12 @@ Then I started looking at the Thompson’s construction, which I found very inte
 
 In week 9 we started to look more into developing a python script for Thompson’s construction. Firstly, I watched the video on [Thompson’s construction by hand](https://web.microsoftstream.com/video/634e1883-ad11-447f-971a-cb7965355c13) as I had difficulty understanding how it works. After re-watching the video a couple of times, I finally had a better understanding on Thompson’s construction and was ready to start coding it, with the help of the video on [Thompson’s construction in code](https://web.microsoftstream.com/video/4012d43a-bb46-4ceb-8aa9-2ae598539a32). Then I tried to complete the code myself, but I found it very difficult, so I followed the video along and was capable of complete the code.
 
+**Match function** 
+
+In week 12  we looked at the match and followes function that is the final chapter of Thompson’s construction. Firstly I watched the lecture on [Reviewing NFA matching by hand](https://web.microsoftstream.com/video/0f3d8f6f-68c9-42d0-9449-b7f868888efe) and [Sketching out the match function](https://web.microsoftstream.com/video/8fe195b7-f7c3-4265-86bc-7ff2c367eee9) in which we created tests to help us grasp on how the NFA matching function works. 
+Then I followed the video on [NFAs: Code to follow the e arrows](https://web.microsoftstream.com/video/59770e5a-2fed-4575-a4eb-0fd691b77d54) in which we develop code to match strings on the NFA. At the start I didn’t really understand how the match function works so I re-watched the video [NFAs: Code to follow the e arrows](https://web.microsoftstream.com/video/59770e5a-2fed-4575-a4eb-0fd691b77d54) to get a better understanding. 
+
+
 # Questions
 
 - **Explain the difference between regular expressions in infix notation and those in postfix notation**
