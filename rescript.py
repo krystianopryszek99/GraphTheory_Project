@@ -186,7 +186,7 @@ def re_to_nfa(postfix):
     else:
         return stack[0] 
 
-# arg parser 
+# arg parser for --help and -h flags and that takes regular expression and file input as a command line argument 
 parser = argparse.ArgumentParser(
     formatter_class=argparse.RawDescriptionHelpFormatter,
     description=textwrap.dedent('''\
@@ -203,11 +203,25 @@ parser = argparse.ArgumentParser(
 
         '''))
 
+parser.add_argument('regexp', metavar='expression', type=str,
+                    help='string for the search')
+
+parser.add_argument('file', metavar='path', type=str,
+                    help='path of the file')
 args = parser.parse_args()
 
-infix = "3+4*(2-1)"
-postfix = "3421-*+"
+# Takes the file path and searches for the matches and returns the number of matches within that file 
+with open(args.file, 'r') as fileSearcher:
+    counter =0
+    for line in fileSearcher:
+        for word in line.split():
+            infix = args.regexp
+            postfix = shunt(infix)
+            nfa = re_to_nfa(postfix)
+            match = nfa.match(word)
+            if match == True:
+                #matches
+                counter +=1
 
-print(f"infix:  {infix}")
-print(f"shunt:  {shunt(infix)}")
-print(f"postfix:    {postfix}")
+    # prints out the number of matches
+    print(counter)
