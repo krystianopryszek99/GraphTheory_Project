@@ -7,6 +7,21 @@
 # Project Description
 My Graph Theory project is about writing a program in Python 3 that takes a regular expression and a file as command line arguments, and outputs the number of matches for the regular expression within the file.
 
+# User manual
+
+Firstly clone this repository on your machine 
+
+1. `git clone https://github.com/krystianopryszek99/GraphTheory_Project2021.git`
+2. `cd GraphTheory_Project2021`
+3. `python3 rescript.py -h`
+
+Further instruction are given when running the code
+
+Program accepts `--help` and `-h` flags which are specified as a command line arguments which explain how to use the program.
+
+![image](https://user-images.githubusercontent.com/57759154/127907328-ec004412-d4f5-4041-9558-85eb9fb3259c.png)
+
+
 # Research
 
 **Shunting-yard algorithm**
