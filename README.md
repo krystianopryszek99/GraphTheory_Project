@@ -21,6 +21,13 @@ Program accepts `--help` and `-h` flags which are specified as a command line ar
 
 ![image](https://user-images.githubusercontent.com/57759154/127907328-ec004412-d4f5-4041-9558-85eb9fb3259c.png)
 
+# Explanation of the algorithm
+
+The program is developed to take regular expression and file as a command line arguments and outputs the number of matches within that file. 
+
+The shunting yard algorithm converts infix expression to postfix expression. The shunt function starts with an empty postfix and stack that is required in the shunting-yard. Inside of the main for loop there is another for loop that checks if it's a digit, if it is it will push it to the output. If you get an operator, it checks if the stack is empty. If there is nothing, it pushes the operator onto the stack and if there is something on the stack it empties the stack until it's false and push the operator to the stack.
+
+The Thompson's construction creates the NFA from postfix. The Thompson's construction has two classes, one for State and NFA. The NFA has a start state and end state both pointing at the State. The function re_to_nfa that will run through the postfix notation and turn it into NFA. The State class, all of the arrows coming from the state have the same label. In the function re_to_nfa keeps a list of NFA, and checks if it's concatenation character, or character, star character and if it's not anyone of them it, it will presume it’s just a regular character not a operator.
 
 # Research
 
