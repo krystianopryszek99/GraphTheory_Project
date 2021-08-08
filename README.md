@@ -25,11 +25,27 @@ Program accepts `--help` and `-h` flags which are specified as a command line ar
 
 The program is developed to take regular expression and file as a command line arguments and outputs the number of matches within that file. 
 
+**Shunting-yard algorithm**
+
 The shunting yard algorithm converts infix expression to postfix expression. The shunt function starts with an empty postfix and stack that is required in the shunting-yard. Inside of the main for loop there is another for loop that checks if it's a digit, if it is it will push it to the output. If you get an operator, it checks if the stack is empty. If there is nothing, it pushes the operator onto the stack and if there is something on the stack it empties the stack until it's false and push the operator to the stack.
+
+**Thompson's construction**
 
 The Thompson's construction creates the NFA from postfix. The Thompson's construction has two classes, one for State and NFA. The NFA has a start state and end state both pointing at the State. The function re_to_nfa that will run through the postfix notation and turn it into NFA. The State class, all of the arrows coming from the state have the same label. In the function re_to_nfa keeps a list of NFA, and checks if it's concatenation character, or character, star character and if it's not anyone of them it, it will presume it’s just a regular character not a operator.
 
+**Match method**
+
+The match method returns true only if the NFA instance matches the string, in this case it will only return true if it matches the string s. The list current lists the previous states which is equal to self.start whcih means it starts in the start state. The method followes that returns a set of states that are taken from the following state and all its e arrow. If the state has e arrows and label is None, it will loop through this state's arrows and returns the set of states.
+
+**Command line arguments**
+
+Argparse allows the program to accept command line arguments and allows the program to create help flags which are used to explain how the program works. The program accepts regular expression and single file. The help flags accepts both `-h` and `--help` commands. Args parser is an easy and sufficient way to write user-friendly command-line interfaces. 
+
 # Research
+
+**Argparse**
+
+In week 4 I was introduced to argparse which deals with command line arguments in Python. Firstly I watched the video on [argsparser](https://web.microsoftstream.com/video/49044275-f5d9-442d-938f-c3005aa911f4?referrer=https://learnonline.gmit.ie/) which was available to us on moodle. After completing the lab, I wanted to find out more about argsparser so I did some research and found great examples on [docs.python](https://docs.python.org/3/library/argparse.html). 
 
 **Shunting-yard algorithm**
 
@@ -50,7 +66,6 @@ In week 9 we started to look more into developing a python script for Thompson�
 
 In week 12  we looked at the match and followes function that is the final chapter of Thompson’s construction. Firstly I watched the lecture on [Reviewing NFA matching by hand](https://web.microsoftstream.com/video/0f3d8f6f-68c9-42d0-9449-b7f868888efe) and [Sketching out the match function](https://web.microsoftstream.com/video/8fe195b7-f7c3-4265-86bc-7ff2c367eee9) in which we created tests to help us grasp on how the NFA matching function works. 
 Then I followed the video on [NFAs: Code to follow the e arrows](https://web.microsoftstream.com/video/59770e5a-2fed-4575-a4eb-0fd691b77d54) in which we develop code to match strings on the NFA. At the start I didn’t really understand how the match function works so I re-watched the video [NFAs: Code to follow the e arrows](https://web.microsoftstream.com/video/59770e5a-2fed-4575-a4eb-0fd691b77d54) to get a better understanding. 
-
 
 # Questions
 
