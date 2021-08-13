@@ -186,11 +186,15 @@ def re_to_nfa(postfix):
     else:
         return stack[0] 
 
-# arg parser for --help and -h flags and that takes regular expression and file input as a command line argument 
+# User Input - takes in regular expression and file name 
+# Allows only single regular expression and single file name 
+# arg parser for --help and -h flags
+
 parser = argparse.ArgumentParser(
     formatter_class=argparse.RawDescriptionHelpFormatter,
     description=textwrap.dedent('''\
-        How to run this program
+        _______________________________________
+                How to run this program
         _______________________________________
 
         Program that takes a regular expression 
@@ -198,16 +202,25 @@ parser = argparse.ArgumentParser(
         and outputs the number of matches for 
         the regular expression within the file
 
+        Before you run the program, ensure you
+        have "input.txt" in the same folder as 
+        the script "rescript.py". 
+
         Run the program as follows:
+
         eg. python3 rescript.py a.b input.txt
 
+        Program only accepts single file input 
+        _______________________________________
         '''))
 
+# takes regular expression
 parser.add_argument('regexp', metavar='expression', type=str,
                     help='string for the search')
 
+# takes file name
 parser.add_argument('file', metavar='path', type=str,
-                    help='path of the file')
+                    help='name of the file')
 args = parser.parse_args()
 
 # Takes the file path and searches for the matches and returns the number of matches within that file 
