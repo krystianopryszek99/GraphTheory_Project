@@ -19,7 +19,7 @@ Further instruction are given when running the code
 
 Program accepts `--help` and `-h` flags which are specified as a command line arguments which explain how to use the program.
 
-![image](https://user-images.githubusercontent.com/57759154/127907328-ec004412-d4f5-4041-9558-85eb9fb3259c.png)
+![image](https://user-images.githubusercontent.com/57759154/130155723-41a7ad52-a81a-472c-a831-f1ac463bb1f5.png)
 
 # Explanation of the algorithm
 
@@ -71,15 +71,15 @@ Then I followed the video on [NFAs: Code to follow the e arrows](https://web.mic
 
 - **Explain the difference between regular expressions in infix notation and those in postfix notation**
 
-  [Infix notation](https://en.wikipedia.org/wiki/Infix_notation) is a popular notation for logical formulas and assertions.
+  [Infix notation](https://en.wikipedia.org/wiki/Infix_notation) is a popular notation for logical formulas and assertions. . Infix notation is distinct from function notation, in which a function's name denotes a certain action and it’s arguments are the operands.
   
-  [Postfix notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation), often known as Reverse Polish notation or Polish postfix notation.
+  [Postfix notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation), often known as Reverse Polish notation or Polish postfix notation was invented to reduce computer memory access and make the use of the stack to evaluate expressions.
 
-  The main difference between infix and postfix notation is that the infix notation places the operators between the operands, whereas the postfix notation places the operator after the operands.
+  The main difference between infix and postfix notation is that the infix notation places the operators between the operands <operand> <operator> <operand>, whereas the postfix notation places the operator after the operands <operand> <operand> <operator>. 
 
-  Humans can read and grasp infix notation more easily, but postfix notation is much more difficult to understand.
+  Humans can read and grasp infix notation more easily, but postfix notation is much more difficult to understand. Postfix does not require brackets to indicate the order of evaluation, making them easier for machines to evaluate.
 
-  Parentheses around groups of operands and operators are required in infix notation, unlike in postfix notation, to indicate the intended order in which operations are to be executed. As long as each operator has a fixed number of operands, no parentheses are required in postfix notation.
+  Parentheses around groups of operands and operators are required in infix notation, unlike in postfix notation, to indicate the intended order in which operations are to be executed. As long as each operator has a fixed number of operands, no parentheses are required in postfix notation. An operator with a higher precedence level accepts its operands before an operator with a lower precedence level in infix notation. 
 
   In postfix notation when there are several operations, operators are assigned immediately following their second operands. Postfix notation has been shown to result in quicker calculations since it does not need parenthesizing expressions, requiring less operations to be performed to complete ordinary calculations.
   
@@ -96,6 +96,8 @@ Then I followed the video on [NFAs: Code to follow the e arrows](https://web.mic
 You presume that the regular expression is in postfix, the stack of fragments of the overall nondeterministic finite automaton (NFA) is created and the normal characters such as `“.” , “*“, and “|”` are pushed onto the stack. Special characters will be considered like operators, having the ability to pop of the stack and perform something with what’s pop from the stack.
 
   The one or two nondeterministic finite automaton (NFA) fragments on the stack are joined together to form a new start state, which is then joined with e arrows, and then from one or two NFA’s fragment get new NFA fragment and push that onto the stack.
+  
+  The algorithm works in a predefined sequence, breaking down an expression into its component subexpressions, from which the NFA is built using a set of rules. Thompson's construction algorithm is one of several for constructing NFAs from regular expressions.  Kleene's approach, in contrast to Thompson's, converts a finite automaton into a regular expression.
   
   **Rules**
   
@@ -120,11 +122,13 @@ You presume that the regular expression is in postfix, the stack of fragments of
 
 - **Explain what is meant by the term irregular language in the context of regular expressions**
 
-  A non-regular language, often known as an irregular language, is one that cannot be defined by a regular expression. Non-regular languages outnumber regular languages by a significant amount. According to Kleene's theorem, no FA or TG may accept a non-regular language.
+  A non-regular language, often known as an irregular language, is one that cannot be defined by a regular expression. Non-regular languages outnumber regular languages by a significant amount. According to Kleene's theorem, no Finite Automaton (FA) or Transition Graph (TG) may accept a non-regular language. 
+  
+  The Finite State Machine (FSM) is a Finite Automaton (FA) that chooses whether to accept or reject a string. There are two types of FA's, Non-deterministic (NFA) and Deterministic (DFA). A Transition Graph is made up of three components: a finite number of states, an alphabet of potential inputs, and a finite number of transitions that demonstrate how to go from one state to another.
   
   The existence of non-regular languages is ensured by the fact that regular languages of any alphabet are countable, and we know that the set of all subsets of strings is not countable. Nonetheless, the goal of creating non-regular languages is to show that certain languages that are "computable" in some way are not regular.
   
-  Pumping Lemma is a well-known theorem that uses the Pigeon Hole Principle to determine if a language is regular or not. However, the pumping lemma is a negative test; if a language does not meet it, we can be certain that it is not regular; if it does, the language may or may not be regular.
+  Pumping Lemma is a well-known theorem that uses the Pigeon Hole Principle to determine if a language is regular or not, but it cannot be used to prove that a language is regular. The pumping lemma is used to prove the non-regularity of a language via contradiction. However, the Pumping Lemma is a negative test, if a language does not meet it, we can be certain that it is not regular, if it does, the language may or may not be regular.
   
   The languages Palindrome is a examples of nonregular languages. A palindrome is a word, number, phrase, or other character sequence that reads the same backward as it does forward.
 
@@ -137,11 +141,19 @@ https://medium.com/swlh/visualizing-thompsons-construction-algorithm-for-nfas-st
 https://web.microsoftstream.com/video/d6d9a2d8-b23e-4abf-b1b7-af3a2d44b82f?referrer=https:%2F%2Flearnonline.gmit.ie%2F
 
 https://en.wikipedia.org/wiki/Infix_notation
-
-https://en.wikipedia.org/wiki/Reverse_Polish_notation
-
+  
 https://pediaa.com/difference-between-prefix-and-postfix/#Infix
 
+https://en.wikipedia.org/wiki/Reverse_Polish_notation
+  
+https://medium.com/swlh/visualizing-thompsons-construction-algorithm-for-nfas-step-by-step-f92ef378581b
+
 https://slideplayer.com/slide/12946344/
+  
+https://www.cs.wcupa.edu/rkline/fcs/re-pump.html
 
 https://www.geeksforgeeks.org/how-to-identify-if-a-language-is-regular-or-not/
+  
+https://slidetodoc.com/4-b-lexical-analysis-finite-automata-finite-automata/
+  
+https://slideplayer.com/slide/9604318/
